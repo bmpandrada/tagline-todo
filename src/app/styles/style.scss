@@ -1,0 +1,157 @@
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background: #8a2387;
+  background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: $box-shadow;
+  font-family: $font;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  @media (max-width: 600px) {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+.title-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .input,
+  .textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .submit {
+    padding: 10px;
+    border: none;
+    background: $primary;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: [object object];
+    background-image: radial-gradient(circle at 100% 0%, rgba(94, 138, 243, 1) 15%, rgba(243, 61, 223, 1));
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}
+
+.taskList {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+
+    &.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .taskHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #a1a1cc;
+      border-radius: .25rem;
+      padding: .25rem .25rem .25rem .75rem;
+      margin-bottom: 10px;
+
+      .taskTitle {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .taskDate {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+
+    .taskActions {
+      display: flex;
+      gap: 10px;
+ 
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+      .doneBtn {
+        line-height: 1;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+        background-color: #ef5350;
+      }
+
+      .deleteBtn {
+        line-height: 1;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+        background-color: #4caf50;
+
+        &:hover {
+          background: $danger-hover;
+        }
+      }
+    }
+  }
+}
+
+ .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .title-footer {
+        text-align: center;
+        font-size: .75rem;
+    }
+
+    img {
+    width: 100%;
+    max-width: 100px;
+  }
+}
